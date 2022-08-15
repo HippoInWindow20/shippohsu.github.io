@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Picker</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="周逸調色盤">
+    <meta name="theme-color" content="#FFF">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body style="overflow: hidden;" ontouchstart="">
+    <iframe id="frame" style="width: 100vw;height: 100vh;border: none;position: absolute;top: 0;left: 0;"></iframe>
+</body>
+<script>
+    function deviceType() {
+        const ua = navigator.userAgent;
+        if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+            return "tablet";
+        } else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+            return "mobile";
+        }
+        return "desktop";
+    }
+    if (deviceType() == "mobile")
+        document.getElementById("frame").src = "mobile.html";
+    else
+        document.getElementById("frame").src = "pc.html";
+</script>
+
+</html>

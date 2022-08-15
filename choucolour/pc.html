@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Frame</title>
+    <link rel="stylesheet" href="pc.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 60;
+            font-size: 5vh;
+            padding: 2vh 4vh;
+            color: black;
+        }
+    </style>
+</head>
+
+<body ontouchstart="">
+    <div class="header">
+        <table style="border: none;width: 100%;">
+            <tbody>
+                <tr>
+                    <td style="text-align:left">
+                        <p class="title">周逸調色盤</p>
+                    </td>
+                    <td style="text-align:right">
+                        <button title="色彩選取">
+                                <span class="material-symbols-outlined">
+                                    imagesearch_roller
+                                </span>
+                            </button>
+                        <button title="設定">
+                            <span class="material-symbols-outlined">
+                                settings
+                            </span>
+                        </button>
+                        <button onclick="location.href = 'mobile.html'" title="行動版">
+                            <span class="material-symbols-outlined">
+                                smartphone
+                            </span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="mainWindow" class="main">
+        <table style="width: 100vw;height: 85vh">
+            <tbody>
+                <tr>
+                    <td style="width: 70%">
+                        <div id="preview" style="display: flex;justify-content: center;justify-items: center;">
+                            <div id="bg" style="aspect-ratio: 0.71;background: rgb(218, 155, 255);height: 80vh;overflow: hidden;box-shadow: 0px 2px 10px 1px #888;">
+                                <img src="template.svg" style="position: relative;top: 0;left: 0;height: 80vh" />
+                            </div>
+                        </div>
+                    </td>
+                    <td style="width: 30%;box-shadow:0px 2px 10px 1px #666;">
+                        <input id="picker" type="color">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="pc.js"></script>
+
+</html>
